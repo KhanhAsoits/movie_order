@@ -110,7 +110,7 @@ class formBuilder
             switch($exp) // selecting regular expression types
             {
                 case "name": // if validation for name
-                    $expression='/^[a-zA-Z ]+$/';
+                    $expression='/[^a-z0-9A-Z_[:space:]ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]/';
                     $err_msg="The $label can only consist of alphabets";
                     break;
                 case "age":
@@ -118,7 +118,7 @@ class formBuilder
                     $err_msg="Enter a valid $label";
                     break;
                 case "address":
-                    $expression='/^[a-zA-Z0-9,\n ]+$/';
+                    $expression='/[^a-z0-9A-Z_[:space:]ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]/';
                     $err_msg="Enter a valid $label";
                     break;
                 case "place":
@@ -142,7 +142,7 @@ class formBuilder
                     $err_msg="Enter a valid $label";
                     break;
                 case "text":
-                    $expression='/^[a-zA-Z,. ]+$/';
+                    $expression='/^[a-zA-Z,. ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/';
                     $err_msg="Enter a valid $label";
                     break;
                 case "year":
