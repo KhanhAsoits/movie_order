@@ -5,7 +5,7 @@
       <b>Version</b> 2.3.8
     </div>
     
-    <strong> &copy; <?php echo date("Y"); ?> <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong> &copy; <?php echo date("Y"); ?> <a href="https://www.facebook.com/profile.php?id=100082007197470">Phuc Long Nguyen</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -21,14 +21,14 @@
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <h3 class="control-sidebar-heading">Hoạt động gần đây</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript:void(0)">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">Sinh Nhật</h4>
 
                 <p>Will be 23 on April 24th</p>
               </div>
@@ -39,9 +39,9 @@
               <i class="menu-icon fa fa-user bg-yellow"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                <h4 class="control-sidebar-subheading">Phone</h4>
 
-                <p>New phone +1(800)555-1234</p>
+                <p>+84 0987654321</p>
               </div>
             </a>
           </li>
@@ -50,77 +50,77 @@
               <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                <h4 class="control-sidebar-subheading">Email</h4>
 
-                <p>nora@example.com</p>
+                <p>example@gmail.com</p>
               </div>
             </a>
           </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
+<!--          <li>-->
+<!--            <a href="javascript:void(0)">-->
+<!--              <i class="menu-icon fa fa-file-code-o bg-green"></i>-->
+<!---->
+<!--              <div class="menu-info">-->
+<!--                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>-->
+<!---->
+<!--                <p>Execution time 5 seconds</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
         </ul>
         <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <h3 class="control-sidebar-heading">Tiến trình công việc</h3>
+<!--        <ul class="control-sidebar-menu">-->
+<!--          <li>-->
+<!--            <a href="javascript:void(0)">-->
+<!--              <h4 class="control-sidebar-subheading">-->
+<!--                Custom Template Design-->
+<!--                <span class="label label-danger pull-right">70%</span>-->
+<!--              </h4>-->
+<!---->
+<!--              <div class="progress progress-xxs">-->
+<!--                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="javascript:void(0)">-->
+<!--              <h4 class="control-sidebar-subheading">-->
+<!--                Update Resume-->
+<!--                <span class="label label-success pull-right">95%</span>-->
+<!--              </h4>-->
+<!---->
+<!--              <div class="progress progress-xxs">-->
+<!--                <div class="progress-bar progress-bar-success" style="width: 95%"></div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="javascript:void(0)">-->
+<!--              <h4 class="control-sidebar-subheading">-->
+<!--                Laravel Integration-->
+<!--                <span class="label label-warning pull-right">50%</span>-->
+<!--              </h4>-->
+<!---->
+<!--              <div class="progress progress-xxs">-->
+<!--                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="javascript:void(0)">-->
+<!--              <h4 class="control-sidebar-subheading">-->
+<!--                Back End Framework-->
+<!--                <span class="label label-primary pull-right">68%</span>-->
+<!--              </h4>-->
+<!---->
+<!--              <div class="progress progress-xxs">-->
+<!--                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
         <!-- /.control-sidebar-menu -->
 
       </div>
@@ -131,49 +131,49 @@
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
         <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+          <h3 class="control-sidebar-heading">Cài đặt Chung</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Report panel usage
+                Sử dụng bảng điều khiển
               <input type="checkbox" class="pull-right" checked>
             </label>
 
             <p>
-              Some information about this general settings option
+                Một số thông tin về tùy chọn thiết đặt chung này
             </p>
           </div>
           <!-- /.form-group -->
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Allow mail redirect
+              Cho phép chuyển hướng email
               <input type="checkbox" class="pull-right" checked>
             </label>
 
             <p>
-              Other sets of options are available
+                Các bộ tùy chọn khác có sẵn
             </p>
           </div>
           <!-- /.form-group -->
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Expose author name in posts
+                Hiển thị tên tác giả trong bài viết
               <input type="checkbox" class="pull-right" checked>
             </label>
 
             <p>
-              Allow the user to show his name in blog posts
+                Cho phép người dùng hiển thị tên của mình trong các bài đăng trên blog
             </p>
           </div>
           <!-- /.form-group -->
 
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
+          <h3 class="control-sidebar-heading">Cài đặt trò chuyện</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Show me as online
+              Hiển thị dưới dạng trực tuyến
               <input type="checkbox" class="pull-right" checked>
             </label>
           </div>
@@ -181,7 +181,7 @@
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Turn off notifications
+              Tắt thông báo
               <input type="checkbox" class="pull-right">
             </label>
           </div>
@@ -189,7 +189,7 @@
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Delete chat history
+              Xóa lịch sử trò chuyện
               <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
             </label>
           </div>

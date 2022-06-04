@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Theatre Assistant| Admin</title>
+  <title>Quản trị| Đăng nhập</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -27,27 +27,27 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a>Theatre Assistant<b> &nbsp; Admin Panel</b></a>
+    <a>Trang quản trị<br><b>Admin Panel</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <?php session_start(); include('../msgbox.php');?>
-    <p class="login-box-msg">Please login to start your session</p>
+    <p class="login-box-msg">Vui lòng đăng nhập!</p>
 <form action="pages/process_login.php" method="post">
       <div class="form-group has-feedback">
-        <input name="Email" type="text" size="25" placeholder="Username" class="form-control"/>
+        <input name="Email" type="text" size="25" placeholder="Tên đăng nhập" class="form-control"/>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input name="Password" type="password" size="25" placeholder="Password" class="form-control" />
+        <input name="Password" type="password" size="25" placeholder="Mật khẩu" class="form-control" />
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group">
-          <button type="submit" class="btn btn-danger">Login</button>
+          <button type="submit" class="btn btn-danger">Đăng nhập</button>
       </div>
     </form>
 
-    <a href="../theatre/index.php">Go To Theatre Panel</a>
+    <a href="../theatre/index.php">Chuyển hướng đến trang nhân viên</a>
 
   </div>
   <!-- /.login-box-body -->
