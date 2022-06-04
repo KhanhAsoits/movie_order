@@ -5,12 +5,12 @@
     {
   ?>
     <table class="table table-bordered table-hover">
-      <th class="col-md-1">Slno</th>
-      <th class="col-md-3">Screen Name</th>
-      <th class="col-md-1">Seats</th>
-      <th class="col-md-1">Charge</th>
-      <th class="col-md-3">Show Time</th>
-      <th class="text-right col-md-3"><button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Add Screen</button></th>
+      <th class="col-md-1">STT</th>
+      <th class="col-md-3">Tên rạp phim</th>
+      <th class="col-md-1">Tổng số ghế</th>
+      <th class="col-md-1">Phí xuất vé</th>
+      <th class="col-md-3">Lịch chiếu</th>
+      <th class="text-right col-md-3"><button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Thêm rạp phim</button></th>
         <?php 
         $sl=1;
         while($screen=mysqli_fetch_array($sr))
@@ -29,7 +29,7 @@
             else
             {echo "No Show Time Added";}
             ?></td>
-            <td class="text-right"><button data-toggle="modal" data-id="<?php echo $screen['screen_id'];?>" data-target="#view-modal2" id="getUser2" class="btn btn-sm btn-warning"><i class="fa fa-plus"></i> Add Show Times</button></td>
+            <td class="text-right"><button data-toggle="modal" data-id="<?php echo $screen['screen_id'];?>" data-target="#view-modal2" id="getUser2" class="btn btn-sm btn-warning"><i class="fa fa-plus"></i> Thêm lịch chiếu</button></td>
           </tr>
           <?php
           $sl++;
@@ -41,7 +41,7 @@
     else
     {
       ?>
-      <button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Add Screen</button>
+      <button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Thêm rạp phim</button>
       <?php
     }
     ?>

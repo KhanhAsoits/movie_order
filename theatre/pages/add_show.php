@@ -16,11 +16,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Thêm chương trình
+        Thêm lịch chiếu
       </h1>
       <ol class="breadcrumb">
         <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
-        <li class="active">Thêm chương trình mới</li>
+        <li class="active">Thêm lịch chiếu phim</li>
       </ol>
     </section>
 
@@ -49,7 +49,7 @@ include('header.php');
               <?php $frm->validate("movie",array("required","label"=>"Movie")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <label class="control-label">Select Screen</label>
+              <label class="control-label">Chọn rạp phim</label>
               <select name="screen" class="form-control" id="screen">
                 <option value>Select Screen</option>
                 <?php
@@ -65,19 +65,19 @@ include('header.php');
               <?php $frm->validate("screen",array("required","label"=>"Screen")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <label class="control-label">Select Show Times</label>
+              <label class="control-label">Chọn thời gian chiếu phim (Nhấn giữ phím CTRL để chọn nhiều thời gian chiếu)</label>
               <select name="stime[]" class="form-control" id="stime" multiple>
-                <option value="0">Select Show Times</option>
+                <option value="0">Chọn thời gian chiếu phim</option>
               </select>
               
             </div>
             <div class="form-group">
-              <label class="control-label">Start Date</label>
+              <label class="control-label">Ngày bắt đầu</label>
               <input type="date" name="sdate" class="form-control"/>
               <?php $frm->validate("sdate",array("required","label"=>"Start Date")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <button class="btn btn-success">Add Show</button>
+              <button class="btn btn-success">Thêm Chương trình</button>
             </div>
           </form>
         </div> 
@@ -105,7 +105,7 @@ include('footer.php');
 			$('#stime').html(data);    
 		})
 		.fail(function(){
-			$('#stime').html('<option><i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...</option>');
+			$('#stime').html('<option><i class="glyphicon glyphicon-info-sign"></i> Đã xảy ra lỗi. Vui lòng thử lại...</option>');
 		});
   });
 </script>
