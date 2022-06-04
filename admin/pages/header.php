@@ -13,7 +13,7 @@ include('../../config.php');
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | Admin</title>
+  <title>Trang quản trị | Admin</title>
   <!-- valodation -->
   <script type="text/javascript" src="../validation/vendor/jquery/jquery-1.10.2.min.js"></script>
   <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css"/> 
@@ -47,9 +47,9 @@ include('../../config.php');
     <!-- Logo -->
     <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>O</b>BS</span>
+      <span class="logo-mini"><b>M</b>OV</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>OMTBS</b></span>
+      <span class="logo-lg"><b>MOVIET</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -80,7 +80,7 @@ include('../../config.php');
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Đăng xuất</a>
                 </div>
               </li>
             </ul>
@@ -104,8 +104,8 @@ include('../../config.php');
           <img src="admin-icn.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Administrator</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>Quản trị viên</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Đang hoạt động</a>
         </div>
       </div>
       
@@ -114,7 +114,7 @@ include('../../config.php');
       <ul class="sidebar-menu">
         <li class="treeview">
           <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Trang chủ</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -123,7 +123,7 @@ include('../../config.php');
         
           <li class="treeview">
           <a href="add_theatre.php">
-            <i class="fa fa-film"></i> <span>Add Theatre</span>
+            <i class="fa fa-film"></i> <span>Thêm rạp phim</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -131,7 +131,7 @@ include('../../config.php');
         </li>
         <li class="treeview">
           <a href="add_movie_news.php">
-            <i class="fa fa-plus"></i> <span>Upcoming Movie News</span>
+            <i class="fa fa-plus"></i> <span>Tin tức phim sắp chiếu</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

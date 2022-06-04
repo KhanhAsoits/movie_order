@@ -3,7 +3,7 @@
     include('../../config.php');
     $w=mysqli_query($con,"select * from tbl_show_time where screen_id='$id'");
     ?>
-    <option value="0">Select Show</option>
+    <option value="0">Chọn Lịch chiếu</option>
     <?php
     while($sh=mysqli_fetch_array($w))
     {

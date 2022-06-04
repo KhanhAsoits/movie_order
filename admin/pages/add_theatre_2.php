@@ -11,9 +11,9 @@ include('header.php');
         Theater Details
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="add_theater.php">Add Theater</a></li>
-        <li class="active">Add Theater Details</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li><a href="add_theater.php">Thêm rạp phim</a></li>
+        <li class="active">Thêm chi tiết rạp phim</li>
       </ol>
     </section>
 
@@ -66,12 +66,12 @@ include('header.php');
             {
           ?>
             <table class="table table-bordered table-hover">
-              <th class="col-md-1">Slno</th>
-              <th class="col-md-3">Screen Name</th>
-              <th class="col-md-1">Seats</th>
-              <th class="col-md-1">Charge</th>
-              <th class="col-md-3">Show Time</th>
-              <th class="text-right col-md-3"><button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Add Screen</button></th>
+                <th class="col-md-1">STT</th>
+                <th class="col-md-3">Tên rạp phim</th>
+                <th class="col-md-1">Tổng số ghế</th>
+                <th class="col-md-1">Phí xuất vé</th>
+                <th class="col-md-3">Lịch chiếu phim</th>
+              <th class="text-right col-md-3"><button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Thêm rạp phim</button></th>
                 <?php 
                 $sl=1;
                 while($screen=mysqli_fetch_array($sr))
@@ -90,7 +90,7 @@ include('header.php');
                     else
                     {echo "No Show Time Added";}
                     ?></td>
-                    <td class="text-right"><button data-toggle="modal" data-id="<?php echo $screen['screen_id'];?>" data-target="#view-modal2" id="getUser2" class="btn btn-sm btn-warning"><i class="fa fa-plus"></i> Add Show Times</button></td>
+                    <td class="text-right"><button data-toggle="modal" data-id="<?php echo $screen['screen_id'];?>" data-target="#view-modal2" id="getUser2" class="btn btn-sm btn-warning"><i class="fa fa-plus"></i> Thêm lịch chiếu phim</button></td>
                   </tr>
                   <?php
                   $sl++;
@@ -102,7 +102,7 @@ include('header.php');
             else
             {
               ?>
-              <button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Add Screen</button>
+              <button data-toggle="modal" data-target="#view-modal" id="getUser" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Thêm rạp phim</button>
                     
               <?php
             }
@@ -117,7 +117,7 @@ include('header.php');
                        <div class="modal-header"> 
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">
-                            	<i class="fa fa-plus"></i> Add Screen
+                            	<i class="fa fa-plus"></i> Them rạp phim
                             </h4> 
                        </div> 
                        <div class="modal-body"> 
@@ -144,27 +144,26 @@ include('header.php');
                        <div class="modal-header"> 
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">
-                            	<i class="fa fa-plus"></i> Add Show Time
+                            	<i class="fa fa-plus"></i> Thêm lịch chiếu
                             </h4> 
                        </div> 
                        <div class="modal-body"> 
                            <div class="form-group">
-                       	     <label class="control-label">Select Show</label>
+                       	     <label class="control-label">Chọn lịch chiếu phim</label>
                        	     <select name="s_name" id="s_name" class="form-control">
-                       	       <option value="0">Select Show</option>
-                       	       <option>Noon</option>
-                       	       <option>Matinee</option>
-                       	       <option>First</option>
-                       	       <option>Second</option>
-                       	       <option>Others</option>
+                       	       <option value="0">Chọn lịch chiếu phim</option>
+                                 <option>Sáng</option>
+                                 <option>Trưa</option>
+                                 <option>Tối</option>
+                                 <option>Khác</option>
                        	     </select>
                        	   </div>
                        	   <div class="form-group">
-                       	     <label class="control-label">Show Starting Time</label>
+                       	     <label class="control-label">Xem thời gian chiếu phim</label>
                        	     <input type="time" id="s_time" class="form-control"/>
                        	   </div>
                        	   <div class="form-group">
-                            <button class="btn btn-success" id="savetime">Save</button>
+                            <button class="btn btn-success" id="savetime">Lưu</button>
                           </div>
                         </div> 
                         <div class="modal-footer"> 
@@ -195,7 +194,7 @@ include('footer.php');
 			$('#screendtls').html(data);    
 		})
 		.fail(function(){
-			$('#screendtls').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
+			$('#screendtls').html('<i class="glyphicon glyphicon-info-sign"></i> Đã xảy ra lỗi. Vui lòng thử lại...');
 		  });
   }
   $(document).ready(function(){ // load dynamic bootstrap model
@@ -220,7 +219,7 @@ include('footer.php');
   			$('#modal-loader').hide();		  // hide ajax loader	
   		})
   		.fail(function(){
-  			$('#dynamic-content').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
+  			$('#dynamic-content').html('<i class="glyphicon glyphicon-info-sign"></i> Đã xảy ra lỗi. Vui lòng thử lại...');
   			$('#modal-loader').hide();
   		});
   		

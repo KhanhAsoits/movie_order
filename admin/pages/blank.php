@@ -11,7 +11,7 @@ include('header.php');
         Student Registration
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="index"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
         <li class="active">Add Course</li>
       </ol>
     </section>

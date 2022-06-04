@@ -12,7 +12,7 @@
     }
     else {
         ?>
-        <option disabled>No Show time added in selected screen</option>
+        <option disabled>Không có lịch chiếu nào được thêm vào màn hình đã chọn</option>
         <?php
     }
     ?>
