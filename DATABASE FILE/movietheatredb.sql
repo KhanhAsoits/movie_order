@@ -1,24 +1,13 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.7.33 - MySQL Community Server (GPL)
--- Server OS:                    Win64
--- HeidiSQL Version:             11.2.0.6213
--- --------------------------------------------------------
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
--- Dumping database structure for movietheatredb
 DROP DATABASE IF EXISTS `movietheatredb`;
 CREATE DATABASE IF NOT EXISTS `movietheatredb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `movietheatredb`;
 
--- Dumping structure for table movietheatredb.tbl_bookings
 DROP TABLE IF EXISTS `tbl_bookings`;
 CREATE TABLE IF NOT EXISTS `tbl_bookings` (
   `book_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -35,7 +24,6 @@ CREATE TABLE IF NOT EXISTS `tbl_bookings` (
   PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_bookings: ~3 rows (approximately)
 DELETE FROM `tbl_bookings`;
 /*!40000 ALTER TABLE `tbl_bookings` DISABLE KEYS */;
 INSERT INTO `tbl_bookings` (`book_id`, `ticket_id`, `t_id`, `user_id`, `show_id`, `screen_id`, `no_seats`, `amount`, `ticket_date`, `date`, `status`) VALUES
@@ -44,7 +32,6 @@ INSERT INTO `tbl_bookings` (`book_id`, `ticket_id`, `t_id`, `user_id`, `show_id`
 	(14, 'BKID1766021', 6, 5, 22, 6, 2, 1200, '2021-04-16', '2021-04-16', 1);
 /*!40000 ALTER TABLE `tbl_bookings` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_contact
 DROP TABLE IF EXISTS `tbl_contact`;
 CREATE TABLE IF NOT EXISTS `tbl_contact` (
   `contact_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -55,12 +42,10 @@ CREATE TABLE IF NOT EXISTS `tbl_contact` (
   PRIMARY KEY (`contact_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_contact: ~0 rows (approximately)
 DELETE FROM `tbl_contact`;
 /*!40000 ALTER TABLE `tbl_contact` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tbl_contact` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_login
 DROP TABLE IF EXISTS `tbl_login`;
 CREATE TABLE IF NOT EXISTS `tbl_login` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -71,7 +56,6 @@ CREATE TABLE IF NOT EXISTS `tbl_login` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_login: ~9 rows (approximately)
 DELETE FROM `tbl_login`;
 /*!40000 ALTER TABLE `tbl_login` DISABLE KEYS */;
 INSERT INTO `tbl_login` (`id`, `user_id`, `username`, `password`, `user_type`) VALUES
@@ -86,7 +70,6 @@ INSERT INTO `tbl_login` (`id`, `user_id`, `username`, `password`, `user_type`) V
 	(20, 6, 'dangk1312200221@gmail.com', '13122002', 2);
 /*!40000 ALTER TABLE `tbl_login` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_movie
 DROP TABLE IF EXISTS `tbl_movie`;
 CREATE TABLE IF NOT EXISTS `tbl_movie` (
   `movie_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -101,26 +84,20 @@ CREATE TABLE IF NOT EXISTS `tbl_movie` (
   PRIMARY KEY (`movie_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_movie: ~13 rows (approximately)
 DELETE FROM `tbl_movie`;
 /*!40000 ALTER TABLE `tbl_movie` DISABLE KEYS */;
 INSERT INTO `tbl_movie` (`movie_id`, `t_id`, `movie_name`, `cast`, `desc`, `release_date`, `image`, `video_url`, `status`) VALUES
-	(11, 6, 'Cherry', 'Tom Holland, Ciara Bravo, Harry Holland, Kelli Berglund', 'Cherry (Tom Holland) drifts from college dropout to army medic in Iraq-anchored only by his one true love, Emily (Ciara Bravo). But after returning from the war with PTSD, his life spirals into drugs.', '2021-03-01', 'images/cherry.jpg', 'https://www.youtube.com/watch?v=H5bH6O0bErk', 0),
-	(12, 6, 'Godzilla vs. Kong', 'Millie Bobby Brown, Alexander Skarsgard, Rebecca Hall', 'The initial confrontation between the two titans -- instigated by unseen forces -- is only the beginning of the mystery that lies deep within the core of the planet.', '2021-03-31', 'images/gvkpster.jpg', 'https://www.youtube.com/watch?v=odM92ap8_c0', 0),
-	(13, 6, 'Outside the Wire', 'Anthony Mackie, Damson Idris, Emily Beecham', 'In the near future, a drone pilot sent into a war zone finds himself paired up with a top-secret android officer on a mission to stop a nuclear attack.', '2021-01-28', 'images/otw.jpg', 'https://www.youtube.com/watch?v=u8ZsUivELbs', 0),
-	(17, 6, 'Justice League', 'Ben Affleck, Henry Cavil, Ezra Miller', 'This is a demo description for the movie ZSJL.', '2021-03-22', 'images/zsjl.jpg', 'https://www.youtube.com/watch?v=vM-Bja2Gy04', 0),
-	(18, 3, 'PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN', 'Benedict Cumberbatch, Elizabeth Olsen Rachel McAdams', 'Sau các sự kiện của Avengers: Endgame, Tiến sĩ Stephen Strange tiếp tục nghiên cứu về Viên đá Thời gian. Nhưng một người bạn cũ đã trở thành kẻ thù tìm cách tiêu diệt mọi phù thủy trên Trái đất, làm xáo trộn kế hoạch của Strange và cũng khiến anh ta mở ra một tội ác khôn lường.', '2022-05-04', 'images/dr-strange-payoff-poster.png', 'https://www.youtube.com/watch?v=nBNtRvpCmms&ab_channel=CGVCinemasVietnam', 0),
-	(19, 3, 'THẾ GIỚI KHỦNG LONG: LÃNH ĐỊA', 'Chris Pratt, Bryce Dallas Howard, Isabella Sermon, Omar Sy, Sam Neill', 'Bốn năm sau kết thúc Jurassic World: Fallen Kingdom, những con khủng long đã thoát khỏi nơi giam cầm và tiến vào thế giới loài người. Giờ đây, chúng xuất hiện ở khắp mọi nơi. Sinh vật to lớn ấy không còn chỉ ở trên đảo như trước nữa mà gần ngay trước mắt, thậm chí còn có thể chạm tới. Owen Grady may mắn gặp lại cô khủng long mà anh và khán giả vô cùng yêu mến - Blue. Tuy nhiên, Blue không đi một mình mà còn đem theo một chú khủng long con khác. Điều này khiến Owen càng quyết tâm bảo vệ mẹ con cô được sinh sống an toàn. Thế nhưng, hai giống loài quá khác biệt. Liệu có thể tồn tại một kỷ nguyên mà khủng long và con người sống chung một cách hòa bình?', '2022-06-10', 'images/rsz_jurassic_world_dominion.png', 'https://www.youtube.com/watch?v=wPOKNuV9BT0&ab_channel=CGVCinemasVietnam', 0),
-	(20, 3, 'DORAEMON: NOBITA VÀ CUỘC CHIẾN VŨ TRỤ TÍ HON 2021', 'Subaru Kimura, Megumi Oohara, Megumi Oohara, Kakazu Yumi, Seki Tomokazu', 'Nobita tình cờ gặp được người ngoài hành tinh tí hon Papi, vốn là Tổng thống của hành tinh Pirika, chạy trốn tới Trái Đất để thoát khỏi những kẻ nổi loạn nơi quê nhà. Doraemon, Nobita và hội bạn thân dùng bảo bối đèn pin thu nhỏ biến đổi theo kích cỡ giống Papi để chơi cùng cậu bé. Thế nhưng, một tàu chiến không gian tấn công cả nhóm. Cảm thấy có trách nhiệm vì liên lụy mọi người, Papi quyết định một mình đương đầu với quân phiến loạn tàn ác. Doraemon và các bạn lên đường đến hành tinh Pirika, sát cánh bên người bạn của mình.', '2022-05-27', 'images/rsz_1doraemonlsw-_poster.png', 'https://www.youtube.com/watch?v=dd_R1GQwKlY&ab_channel=CGVCinemasVietnam', 0),
-	(21, 3, 'HARRY POTTER VÀ CĂN PHÒNG BÍ MẬT (RE-RUN)', 'Daniel Radcliff, Emma Watson, Rupert Grint, Bonnie Wright, Kenneth Branagh,...', 'Phần tiếp theo của loạt phim Harry Potter vẫn tiếp tục xoay quanh bộ ba Harry Potter - Ron Weasley - Hermione Granger. Bộ ba phù thủy sẽ đối mặt với một thử thách mới trong năm học thứ 2 tại trường Hogwarts. Một thế lực hắc ám đang bao trùm ngôi trường phù thủy này, tấn công hàng loạt học sinh và đe dọa mở Phòng Chứa Bí Mật một lần nữa. (Phim chiếu lại)', '2022-06-03', 'images/hp2.png', 'https://www.youtube.com/watch?v=TdYq3WrTCBA&ab_channel=CGVCinemasVietnam', 0),
-	(22, 3, 'PHI CÔNG SIÊU ĐẲNG MAVERICK', 'Tom Cruise, Justin Marks, Peter Craig, Eric Warren Singer', 'Sau hơn ba mươi năm phục vụ, Pete “Maverick” Mitchell từng nổi danh là một phi công thử nghiệm quả cảm hàng đầu của Hải quân, né tránh cơ hội thăng chức, điều khiến anh cảm thấy bị bó buộc, để trở về làm chính mình.', '2022-05-27', 'images/top_gun_maverick_-_poster_28.03_1_.png', 'https://www.youtube.com/watch?v=4O80AMDYwXU&ab_channel=CGVCinemasVietnam', 0),
-	(23, 3, 'ĐẠI NÁO CUNG TRĂNG', 'Aleks Le, Howard Nightingall, Lilian Gartner, Raphael von Bargen, Drew Sarich, Cindy Robinson', 'Chuyến phiêu lưu đến Mặt Trăng của Peter bắt đầu khi em gái cậu, Anne, bị tên Trăng Tặc độc ác bắt cóc khi cô bé đang cố gắng giúp Bác Bọ Zoomzeman tìm lại vợ của mình. Trong cuộc hành trình đầy bất ngờ ấy, Peter gặp Thần Ngủ ở Đồng Cỏ Sao. Để giải cứu Anne, họ đã cùng nhau tham gia một cuộc đua kỳ thú dọc Dải Ngân Hà với 5 vị thần thiên nhiên: Ngài Bão Tố, Phù Thủy Sấm, Ngài Mưa Đá, Bậc Thầy Mưa Gió, và Bà Chúa Tuyết.', '2022-06-03', 'images/mb-main-poster_1.png', 'https://www.youtube.com/watch?v=i7TezW5eueI&ab_channel=CGVCinemasVietnam', 0),
-	(24, 3, 'MAIKA - CÔ BÉ ĐẾN TỪ HÀNH TINH KHÁC', 'Chu Diệp Anh, Lại Trường Phú, Tin Tin, Huy Me, Ngọc Tưởng, Tiểu Bảo Quốc.', 'Hùng là cậu bé 8 tuổi mồ côi mẹ, sống với cha nhưng tình cảm cha con không khăng khít. Sau khi người bạn thân nhất của Hùng phải chuyển nhà, bố con cậu cũng bị chủ nhà ép chuyển đi. Cậu bé thường tìm kiếm niềm an ủi bằng cách ngắm bầu trời đêm. Một đêm có mưa sao băng, cậu thấy một ngôi sao rơi xuống vùng đất gần đó. Khi Hùng đi tìm, cậu không thấy ngôi sao nào mà thấy một cô bé. Hai đứa trẻ kết thân và giúp đỡ nhau.', '2022-05-27', 'images/maika-1200x1800_1.png', 'https://www.youtube.com/watch?v=mOH-VKJBsh8&ab_channel=CGVCinemasVietnam', 0),
-	(25, 3, 'CHUYẾN PHIÊU LƯU CỦA PIL', 'Kaycie Chase, Paul Borne, Julien Crampon...', 'Ngày xửa ngày xưa, có một cô bé mồ côi phải trở thành nàng công chúa bất đắc dĩ không giống ai. Một ngày nọ, hoàng tử bị một tên quan độc ác đầu độc và khiến Pil cùng những người bạn phải đứng lên bảo vệ mình và cả vương quốc.', '2022-06-01', 'images/pilsadventure-poster_1.png', 'https://youtu.be/yeGjaYJPM44', 0),
-	(26, 3, 'HARRY POTTER VÀ HÒN ĐÁ PHÙ THỦY (RE-RUN)', 'Daniel Radcliffe, Rupert Grint, Emma Watson, Tom Felton', 'Chuyển thể của phần đầu tiên của cuốn tiểu thuyết dành cho thiếu nhi nổi tiếng của tác giả J.K.Rowling, cậu bé Harry Potter vào sinh nhật lần thứ 11 rằng bố mẹ cậu là hai vị phù thủy nổi tiếng. Bản thân cậu sở hữu phép thuật và năng lực mà ai cũng mong muốn có được sau khi sống sót khỏi Chúa tể Voldermort. Từ cuộc sống của một đứa trẻ mồ côi, cậu trở thành một học sinh tại ngôi trường phù thủy danh giá Hogwarts. Tại đây, cậu đã tìm được những người bạn thân nhất của mình và giúp cậu khám phá ra sự thật về cái chết bí ẩn của cha mẹ mình. (Phim chiếu lại từ 20/5)', '2022-05-20', 'images/hp1.png', 'https://youtu.be/lzZ_Z1Sfczg', 0);
+	(18, 3, 'PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN', 'Benedict Cumberbatch, Elizabeth Olsen Rachel McAdams', 'Sau các sự kiện của Avengers: Endgame, Tiến sĩ Stephen Strange tiếp tục nghiên cứu về Viên đá Thời gian. Nhưng một người bạn cũ đã trở thành kẻ thù tìm cách tiêu diệt mọi phù thủy trên Trái đất, làm xáo trộn kế hoạch của Strange và cũng khiến anh ta mở ra một tội ác khôn lường.', '2022-05-04', 'images/dr-strange-payoff-poster.png', 'https://www.youtube.com/embed/nBNtRvpCmms', 0),
+	(19, 3, 'THẾ GIỚI KHỦNG LONG: LÃNH ĐỊA', 'Chris Pratt, Bryce Dallas Howard, Isabella Sermon, Omar Sy, Sam Neill', 'Bốn năm sau kết thúc Jurassic World: Fallen Kingdom, những con khủng long đã thoát khỏi nơi giam cầm và tiến vào thế giới loài người. Giờ đây, chúng xuất hiện ở khắp mọi nơi. Sinh vật to lớn ấy không còn chỉ ở trên đảo như trước nữa mà gần ngay trước mắt, thậm chí còn có thể chạm tới. Owen Grady may mắn gặp lại cô khủng long mà anh và khán giả vô cùng yêu mến - Blue. Tuy nhiên, Blue không đi một mình mà còn đem theo một chú khủng long con khác. Điều này khiến Owen càng quyết tâm bảo vệ mẹ con cô được sinh sống an toàn. Thế nhưng, hai giống loài quá khác biệt. Liệu có thể tồn tại một kỷ nguyên mà khủng long và con người sống chung một cách hòa bình?', '2022-06-10', 'images/rsz_jurassic_world_dominion.png', 'https://www.youtube.com/embed/wPOKNuV9BT0', 1),
+	(20, 3, 'DORAEMON: NOBITA VÀ CUỘC CHIẾN VŨ TRỤ TÍ HON 2021', 'Subaru Kimura, Megumi Oohara, Megumi Oohara, Kakazu Yumi, Seki Tomokazu', 'Nobita tình cờ gặp được người ngoài hành tinh tí hon Papi, vốn là Tổng thống của hành tinh Pirika, chạy trốn tới Trái Đất để thoát khỏi những kẻ nổi loạn nơi quê nhà. Doraemon, Nobita và hội bạn thân dùng bảo bối đèn pin thu nhỏ biến đổi theo kích cỡ giống Papi để chơi cùng cậu bé. Thế nhưng, một tàu chiến không gian tấn công cả nhóm. Cảm thấy có trách nhiệm vì liên lụy mọi người, Papi quyết định một mình đương đầu với quân phiến loạn tàn ác. Doraemon và các bạn lên đường đến hành tinh Pirika, sát cánh bên người bạn của mình.', '2022-05-27', 'images/rsz_1doraemonlsw-_poster.png', 'https://www.youtube.com/embed/dd_R1GQwKlY', 1),
+	(21, 3, 'HARRY POTTER VÀ CĂN PHÒNG BÍ MẬT (RE-RUN)', 'Daniel Radcliff, Emma Watson, Rupert Grint, Bonnie Wright, Kenneth Branagh,...', 'Phần tiếp theo của loạt phim Harry Potter vẫn tiếp tục xoay quanh bộ ba Harry Potter - Ron Weasley - Hermione Granger. Bộ ba phù thủy sẽ đối mặt với một thử thách mới trong năm học thứ 2 tại trường Hogwarts. Một thế lực hắc ám đang bao trùm ngôi trường phù thủy này, tấn công hàng loạt học sinh và đe dọa mở Phòng Chứa Bí Mật một lần nữa. (Phim chiếu lại)', '2022-06-03', 'images/hp2.png', 'https://www.youtube.com/embed/TdYq3WrTCBA', 0),
+	(22, 3, 'PHI CÔNG SIÊU ĐẲNG MAVERICK', 'Tom Cruise, Justin Marks, Peter Craig, Eric Warren Singer', 'Sau hơn ba mươi năm phục vụ, Pete “Maverick” Mitchell từng nổi danh là một phi công thử nghiệm quả cảm hàng đầu của Hải quân, né tránh cơ hội thăng chức, điều khiến anh cảm thấy bị bó buộc, để trở về làm chính mình.', '2022-05-27', 'images/top_gun_maverick_-_poster_28.03_1_.png', 'https://www.youtube.com/embed/4O80AMDYwXU', 1),
+	(23, 3, 'ĐẠI NÁO CUNG TRĂNG', 'Aleks Le, Howard Nightingall, Lilian Gartner, Raphael von Bargen, Drew Sarich, Cindy Robinson', 'Chuyến phiêu lưu đến Mặt Trăng của Peter bắt đầu khi em gái cậu, Anne, bị tên Trăng Tặc độc ác bắt cóc khi cô bé đang cố gắng giúp Bác Bọ Zoomzeman tìm lại vợ của mình. Trong cuộc hành trình đầy bất ngờ ấy, Peter gặp Thần Ngủ ở Đồng Cỏ Sao. Để giải cứu Anne, họ đã cùng nhau tham gia một cuộc đua kỳ thú dọc Dải Ngân Hà với 5 vị thần thiên nhiên: Ngài Bão Tố, Phù Thủy Sấm, Ngài Mưa Đá, Bậc Thầy Mưa Gió, và Bà Chúa Tuyết.', '2022-06-03', 'images/mb-main-poster_1.png', 'https://www.youtube.com/embed/i7TezW5eueI', 1),
+	(24, 3, 'MAIKA - CÔ BÉ ĐẾN TỪ HÀNH TINH KHÁC', 'Chu Diệp Anh, Lại Trường Phú, Tin Tin, Huy Me, Ngọc Tưởng, Tiểu Bảo Quốc.', 'Hùng là cậu bé 8 tuổi mồ côi mẹ, sống với cha nhưng tình cảm cha con không khăng khít. Sau khi người bạn thân nhất của Hùng phải chuyển nhà, bố con cậu cũng bị chủ nhà ép chuyển đi. Cậu bé thường tìm kiếm niềm an ủi bằng cách ngắm bầu trời đêm. Một đêm có mưa sao băng, cậu thấy một ngôi sao rơi xuống vùng đất gần đó. Khi Hùng đi tìm, cậu không thấy ngôi sao nào mà thấy một cô bé. Hai đứa trẻ kết thân và giúp đỡ nhau.', '2022-05-27', 'images/maika-1200x1800_1.png', 'https://www.youtube.com/embed/mOH-VKJBsh8', 1),
+	(25, 3, 'CHUYẾN PHIÊU LƯU CỦA PIL', 'Kaycie Chase, Paul Borne, Julien Crampon...', 'Ngày xửa ngày xưa, có một cô bé mồ côi phải trở thành nàng công chúa bất đắc dĩ không giống ai. Một ngày nọ, hoàng tử bị một tên quan độc ác đầu độc và khiến Pil cùng những người bạn phải đứng lên bảo vệ mình và cả vương quốc.', '2022-06-01', 'images/pilsadventure-poster_1.png', 'https://youtube.com/embed/yeGjaYJPM44', 1),
+	(26, 3, 'HARRY POTTER VÀ HÒN ĐÁ PHÙ THỦY (RE-RUN)', 'Daniel Radcliffe, Rupert Grint, Emma Watson, Tom Felton', 'Chuyển thể của phần đầu tiên của cuốn tiểu thuyết dành cho thiếu nhi nổi tiếng của tác giả J.K.Rowling, cậu bé Harry Potter vào sinh nhật lần thứ 11 rằng bố mẹ cậu là hai vị phù thủy nổi tiếng. Bản thân cậu sở hữu phép thuật và năng lực mà ai cũng mong muốn có được sau khi sống sót khỏi Chúa tể Voldermort. Từ cuộc sống của một đứa trẻ mồ côi, cậu trở thành một học sinh tại ngôi trường phù thủy danh giá Hogwarts. Tại đây, cậu đã tìm được những người bạn thân nhất của mình và giúp cậu khám phá ra sự thật về cái chết bí ẩn của cha mẹ mình. (Phim chiếu lại từ 20/5)', '2022-05-20', 'images/hp1.png', 'https://youtube.com/embed/lzZ_Z1Sfczg', 0);
 /*!40000 ALTER TABLE `tbl_movie` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_news
 DROP TABLE IF EXISTS `tbl_news`;
 CREATE TABLE IF NOT EXISTS `tbl_news` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -132,7 +109,6 @@ CREATE TABLE IF NOT EXISTS `tbl_news` (
   PRIMARY KEY (`news_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_news: ~8 rows (approximately)
 DELETE FROM `tbl_news`;
 /*!40000 ALTER TABLE `tbl_news` DISABLE KEYS */;
 INSERT INTO `tbl_news` (`news_id`, `name`, `cast`, `news_date`, `description`, `attachment`) VALUES
@@ -146,7 +122,6 @@ INSERT INTO `tbl_news` (`news_id`, `name`, `cast`, `news_date`, `description`, `
 	(16, 'LIÊN MINH SIÊU THÚ DC', 'Dwayne Johnson, Kevin Hart, Keanu Reeves', '2022-07-29', 'Trong “Liên Minh Siêu Thú DC”, Siêu Cún Krypto và Superman là cặp bài trùng không thể tách rời, cùng sở hữu những siêu năng lực tương tự và cùng nhau chiến đấu chống lại tội phạm tại thành phố Metropolis. Khi Superman và những thành viên của Liên Minh Công Lý bị bắt cóc, Krypto phải thuyết phục cậu chàng Ace luộm thuộm, nàng Heo PB, Rùa Merton và Sóc Chip khai phá những sức mạnh tiềm ẩn và cùng nhau giải cứu các siêu anh hùng. “Liên Minh Siêu Thú DC” có sự góp giọng của bộ đôi ngôi sao nổi tiếng bậc nhất Hollywood Dwayne Johnson (lồng tiếng cho Siêu cún Krypto) và Kevin Hart (Superman). Đặc biệt, tài tử Keanu Reeves sẽ đảm nhận những câu thoại chất lừ đến từ Batman.', 'news_images/dc_league_super_pets-_teaser_poster_1.png');
 /*!40000 ALTER TABLE `tbl_news` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_registration
 DROP TABLE IF EXISTS `tbl_registration`;
 CREATE TABLE IF NOT EXISTS `tbl_registration` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -158,7 +133,6 @@ CREATE TABLE IF NOT EXISTS `tbl_registration` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_registration: ~4 rows (approximately)
 DELETE FROM `tbl_registration`;
 /*!40000 ALTER TABLE `tbl_registration` DISABLE KEYS */;
 INSERT INTO `tbl_registration` (`user_id`, `name`, `email`, `phone`, `age`, `gender`) VALUES
@@ -168,7 +142,6 @@ INSERT INTO `tbl_registration` (`user_id`, `name`, `email`, `phone`, `age`, `gen
 	(6, 'khanh', 'dangk1312200221@gmail.com', '8376658437', 18, 'gender');
 /*!40000 ALTER TABLE `tbl_registration` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_screens
 DROP TABLE IF EXISTS `tbl_screens`;
 CREATE TABLE IF NOT EXISTS `tbl_screens` (
   `screen_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -177,20 +150,14 @@ CREATE TABLE IF NOT EXISTS `tbl_screens` (
   `seats` int(11) NOT NULL COMMENT 'number of seats',
   `charge` int(11) NOT NULL,
   PRIMARY KEY (`screen_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_screens: ~5 rows (approximately)
 DELETE FROM `tbl_screens`;
 /*!40000 ALTER TABLE `tbl_screens` DISABLE KEYS */;
 INSERT INTO `tbl_screens` (`screen_id`, `t_id`, `screen_name`, `seats`, `charge`) VALUES
-	(1, 3, 'Screen 1', 100, 350),
-	(2, 3, 'Screen 2', 150, 310),
-	(3, 4, 'Screen 1', 200, 380),
-	(4, 14, 'Screen1', 34, 250),
-	(6, 6, 'IMX Screen', 200, 600);
+	(1, 3, 'Hà Nội', 1000, 200);
 /*!40000 ALTER TABLE `tbl_screens` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_shows
 DROP TABLE IF EXISTS `tbl_shows`;
 CREATE TABLE IF NOT EXISTS `tbl_shows` (
   `s_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -201,19 +168,17 @@ CREATE TABLE IF NOT EXISTS `tbl_shows` (
   `status` int(11) NOT NULL COMMENT '1 means show available',
   `r_status` int(11) NOT NULL,
   PRIMARY KEY (`s_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_shows: ~4 rows (approximately)
 DELETE FROM `tbl_shows`;
 /*!40000 ALTER TABLE `tbl_shows` DISABLE KEYS */;
 INSERT INTO `tbl_shows` (`s_id`, `st_id`, `theatre_id`, `movie_id`, `start_date`, `status`, `r_status`) VALUES
-	(19, 15, 6, 11, '2021-04-15', 0, 1),
-	(20, 20, 6, 13, '2021-04-15', 0, 1),
-	(21, 19, 6, 12, '2021-03-31', 1, 1),
-	(22, 18, 6, 17, '2021-04-16', 1, 1);
+	(1, 3, 3, 18, '2022-06-04', 0, 1),
+	(3, 1, 3, 18, '2022-06-04', 0, 0),
+	(4, 4, 3, 18, '2022-06-04', 0, 0),
+	(5, 1, 3, 18, '2022-06-05', 1, 1);
 /*!40000 ALTER TABLE `tbl_shows` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_show_time
 DROP TABLE IF EXISTS `tbl_show_time`;
 CREATE TABLE IF NOT EXISTS `tbl_show_time` (
   `st_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -221,9 +186,8 @@ CREATE TABLE IF NOT EXISTS `tbl_show_time` (
   `name` varchar(40) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL COMMENT 'noon,second,etc',
   `start_time` time NOT NULL,
   PRIMARY KEY (`st_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_show_time: ~20 rows (approximately)
 DELETE FROM `tbl_show_time`;
 /*!40000 ALTER TABLE `tbl_show_time` DISABLE KEYS */;
 INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
@@ -246,10 +210,10 @@ INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
 	(18, 6, 'Noon', '00:02:00'),
 	(19, 6, 'First', '06:35:00'),
 	(20, 6, 'Second', '09:18:00'),
-	(21, 5, 'Matinee', '20:04:00');
+	(21, 5, 'Matinee', '20:04:00'),
+	(22, 1, 'Sáng', '19:30:00');
 /*!40000 ALTER TABLE `tbl_show_time` ENABLE KEYS */;
 
--- Dumping structure for table movietheatredb.tbl_theatre
 DROP TABLE IF EXISTS `tbl_theatre`;
 CREATE TABLE IF NOT EXISTS `tbl_theatre` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -261,7 +225,6 @@ CREATE TABLE IF NOT EXISTS `tbl_theatre` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table movietheatredb.tbl_theatre: ~4 rows (approximately)
 DELETE FROM `tbl_theatre`;
 /*!40000 ALTER TABLE `tbl_theatre` DISABLE KEYS */;
 INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VALUES
@@ -272,6 +235,5 @@ INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VAL
 /*!40000 ALTER TABLE `tbl_theatre` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
