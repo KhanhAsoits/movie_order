@@ -30,6 +30,8 @@ a:hover {
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 315px;
+  min-height: 500px;
+  max-height: 600px!important;
   margin: 2em;
   border-radius: 10px;
   display: inline-block;
@@ -162,6 +164,7 @@ a:hover {
     max-width: 95%;
     margin: 1em;
     display: block;
+    max-height: 646px!important;
   }
   .movie-header{
     height: 375px!important;

@@ -77,7 +77,7 @@ include('header.php');
               <?php $frm->validate("sdate",array("required","label"=>"Start Date")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <button class="btn btn-success">Thêm Chương trình</button>
+              <button class="btn btn-success">Thêm lịch chiếu phim</button>
             </div>
           </form>
         </div> 
