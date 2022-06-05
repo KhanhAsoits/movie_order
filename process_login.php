@@ -21,14 +21,14 @@ if(mysqli_num_rows($qry))
 	}
 	else
 	{
-		$_SESSION['error']="Login Failed!";
+		$_SESSION['error']="TÀI KHOẢN HOẶC MẬT KHẨU KHÔNG CHÍNH XÁC";
 		header("location:login.php");
 	}
 	
 }
 else
 {
-	$_SESSION['error']="Login Failed!";
+	$_SESSION['error']="TÀI KHOẢN HOẶC MẬT KHẨU KHÔNG CHÍNH XÁC";
 	header("location:login.php");
 }
 ?>
