@@ -1,8 +1,9 @@
 <html>
-<body>
 <?php
 include('header.php');
 ?>
+<body>
+
 <section style="background-color: black">
     <div class="container py-5">
         <div class="row p-3 text-center">
